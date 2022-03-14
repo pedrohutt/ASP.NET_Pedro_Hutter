@@ -10,11 +10,11 @@ namespace TeamManager.Repositories​
             return timesList;
         }
 
-        public static TeamViewModel GetById(int id)
+        public static TeamViewModel GetById(Guid id)
         {
         TeamViewModel? retorno = null;
 
-            if (id != 0)
+            if (id != Guid.Empty)
             {
                 retorno = timesList.FirstOrDefault(p => p.Id == id);
             }
@@ -47,7 +47,7 @@ namespace TeamManager.Repositories​
         {
             TeamViewModel? retorno = null;
 
-            if (time.Id != 0)
+            if (time.Id != Guid.Empty)
             {
                 retorno = timesList.FirstOrDefault(p => p.Id == time.Id);
 
@@ -62,11 +62,11 @@ namespace TeamManager.Repositories​
             }
         }
 
-        public static void Delete(int id)
+        public static void Delete(Guid id)
         {
             TeamViewModel? retorno = null;
 
-            if (id != 0) retorno = timesList.FirstOrDefault(p => p.Id == id);
+            if (id != Guid.Empty) retorno = timesList.FirstOrDefault(p => p.Id == id);
             if (retorno != null) timesList.Remove(retorno);
         }
     }

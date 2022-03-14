@@ -14,7 +14,7 @@ namespace TeamManager.Controllers
         }
 
         // GET: TeamController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
             var times = TeamsRepository.GetById(id);
             return View(times);
@@ -43,7 +43,7 @@ namespace TeamManager.Controllers
         }
 
         // GET: TeamController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(Guid id)
         {
             var time = TeamsRepository.GetById(id);
             return View();
@@ -52,7 +52,7 @@ namespace TeamManager.Controllers
         // POST: TeamController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, TeamViewModel time)
+        public ActionResult Edit(Guid id, TeamViewModel time)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace TeamManager.Controllers
         }
 
         // GET: TeamController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(Guid id)
         {
             var time = TeamsRepository.GetById(id);
             return View(time);
@@ -75,7 +75,7 @@ namespace TeamManager.Controllers
         // POST: TeamController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(Guid id, IFormCollection collection)
         {
             try
             {
