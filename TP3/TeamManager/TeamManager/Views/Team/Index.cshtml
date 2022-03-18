@@ -9,6 +9,14 @@
 <p>
     <a asp-action="Create">Adicionar novo Time</a>
 </p>
+
+<form asp-action="Index">
+    <p>
+        Nome do time: <input type="text" name="searchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>

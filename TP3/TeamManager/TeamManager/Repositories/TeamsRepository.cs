@@ -38,9 +38,9 @@ namespace TeamManager.Repositories​
             return retorno;
         }
 
-        public static void Create(TeamViewModel aluno)
+        public static void Create(TeamViewModel time)
         {
-            timesList.Add(aluno);
+            timesList.Add(time);
         }
 
         public static void Update(TeamViewModel time)

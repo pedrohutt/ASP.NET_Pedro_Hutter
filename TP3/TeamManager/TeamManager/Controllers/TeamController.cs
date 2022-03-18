@@ -13,6 +13,14 @@ namespace TeamManager.Controllers
             return View(times);
         }
 
+        // POST: TeamController
+        [HttpPost]
+        public ActionResult Index(string searchString)
+        {
+            var times = TeamsRepository.GetBySearch(searchString);
+            return View(times);
+        }
+
         // GET: TeamController/Details/5
         public ActionResult Details(Guid id)
         {
