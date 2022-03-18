@@ -54,7 +54,7 @@ namespace TeamManager.Controllers
         public ActionResult Edit(Guid id)
         {
             var time = TeamsRepository.GetById(id);
-            return View();
+            return View(time);
         }
 
         // POST: TeamController/Edit/5
