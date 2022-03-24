@@ -18,6 +18,7 @@ namespace TP4.Models
         }
 
         public DbSet<Team>? Team { get; set; }
+        public DbSet<Player>? Player { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 
