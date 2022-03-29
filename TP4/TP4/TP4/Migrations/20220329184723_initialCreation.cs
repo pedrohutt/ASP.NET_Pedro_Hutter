@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TP4.Migrations
 {
-    public partial class initialpush : Migration
+    public partial class initialCreation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace TP4.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "VARCHAR(80)", nullable: false),
+                    Nome = table.Column<string>(type: "VARCHAR(80)", nullable: false),
                     TitulosBrasileiros = table.Column<int>(type: "int", nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "datetime", nullable: false)
                 },

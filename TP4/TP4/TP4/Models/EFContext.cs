@@ -27,7 +27,7 @@ namespace TP4.Models
                 .ValueGeneratedOnAdd();
 
             modelBuilder.Entity<Team>()
-                .Property(p => p.Name)
+                .Property(p => p.Nome)
                 .HasColumnType("VARCHAR(80)")
                 .IsRequired();
 

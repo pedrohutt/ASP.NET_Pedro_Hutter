@@ -33,7 +33,7 @@ namespace TP4.Migrations
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("VARCHAR(80)");
 

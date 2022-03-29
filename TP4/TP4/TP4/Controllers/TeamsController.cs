@@ -1,6 +1,10 @@
 ﻿#nullable disable
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TP4.Models;
 
@@ -50,7 +54,7 @@ namespace TP4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,TitulosBrasileiros,DataCriacao")] Team team)
+        public async Task<IActionResult> Create([Bind("Id,Nome,TitulosBrasileiros,DataCriacao")] Team team)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +86,7 @@ namespace TP4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,TitulosBrasileiros,DataCriacao")] Team team)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,TitulosBrasileiros,DataCriacao")] Team team)
         {
             if (id != team.Id)
             {

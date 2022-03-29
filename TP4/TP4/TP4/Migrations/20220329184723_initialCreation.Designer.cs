@@ -12,8 +12,8 @@ using TP4.Models;
 namespace TP4.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20220329181342_initialpush")]
-    partial class initialpush
+    [Migration("20220329184723_initialCreation")]
+    partial class initialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace TP4.Migrations
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("VARCHAR(80)");
 
