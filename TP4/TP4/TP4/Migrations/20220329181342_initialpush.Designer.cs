@@ -12,8 +12,8 @@ using TP4.Models;
 namespace TP4.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20220328214222_InitialPush")]
-    partial class InitialPush
+    [Migration("20220329181342_initialpush")]
+    partial class initialpush
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

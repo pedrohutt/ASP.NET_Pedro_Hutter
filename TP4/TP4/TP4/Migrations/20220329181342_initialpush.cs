@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TP4.Migrations
 {
-    public partial class InitialPush : Migration
+    public partial class initialpush : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

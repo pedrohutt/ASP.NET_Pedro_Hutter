@@ -5,26 +5,19 @@ namespace TP4.Models
     public class EFContext : DbContext
     {
         private string connectionString;
-
         public EFContext(IConfiguration configuration)
         { 
             connectionString = configuration.GetConnectionString("DefaultConnection");
         }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
         {
-
             optionsBuilder.UseSqlServer(connectionString);
-
         }
 
         public DbSet<Team>? Teams { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-
         {
-
             modelBuilder.Entity<Team>()
                 .ToTable("Teams")
                 .HasKey(p => p.Id);
@@ -47,7 +40,6 @@ namespace TP4.Models
                 .Property(p => p.DataCriacao)
                 .HasColumnType("datetime")
                 .IsRequired();
-
         }
     }
 }
