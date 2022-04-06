@@ -51,7 +51,7 @@ namespace AT_TeamManager.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("players");
+                    b.ToTable("Players", (string)null);
                 });
 
             modelBuilder.Entity("AT_TeamManager.Models.Team", b =>

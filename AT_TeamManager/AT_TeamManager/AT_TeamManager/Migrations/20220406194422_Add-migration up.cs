@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AT_TeamManager.Migrations
 {
-    public partial class Initialcreation : Migration
+    public partial class Addmigrationup : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,7 +25,7 @@ namespace AT_TeamManager.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "players",
+                name: "Players",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -38,7 +38,7 @@ namespace AT_TeamManager.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_players", x => x.Id);
+                    table.PrimaryKey("PK_Players", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Team_Player",
                         column: x => x.TeamId,
@@ -47,15 +47,15 @@ namespace AT_TeamManager.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_players_TeamId",
-                table: "players",
+                name: "IX_Players_TeamId",
+                table: "Players",
                 column: "TeamId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "players");
+                name: "Players");
 
             migrationBuilder.DropTable(
                 name: "Teams");

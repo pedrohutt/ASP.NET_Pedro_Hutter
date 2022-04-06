@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AT_TeamManager.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20220331062536_Initialcreation")]
-    partial class Initialcreation
+    [Migration("20220406194422_Add-migration up")]
+    partial class Addmigrationup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,7 +53,7 @@ namespace AT_TeamManager.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("players");
+                    b.ToTable("Players", (string)null);
                 });
 
             modelBuilder.Entity("AT_TeamManager.Models.Team", b =>
