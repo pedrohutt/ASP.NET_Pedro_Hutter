@@ -1,0 +1,43 @@
+﻿@model AT_TeamManager.Models.Team
+
+@{
+    var lista = new List<AT_TeamManager.Models.Player>();
+
+    if (Model.Players != null)
+    {
+        lista = Model.Players.ToList();
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Nascimento</th>
+            <th>Titulos Brasileiros</th>
+            <!--<th></th>-->
+        </tr>
+    </thead>
+<tbody>
+
+
+@foreach (var item in lista) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TitulosBrasileiros)
+            </td>
+
+        </tr>
+}
+</tbody>
+</table>

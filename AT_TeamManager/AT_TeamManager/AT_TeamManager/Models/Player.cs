@@ -7,7 +7,6 @@
         public string? Sobrenome { get; set; }
         public int TitulosBrasileiros { get; set; }
         public DateTime Nascimento { get; set; }
-
         public int? TeamId { get; set; }
         public Team? Team { get; set; }
     }

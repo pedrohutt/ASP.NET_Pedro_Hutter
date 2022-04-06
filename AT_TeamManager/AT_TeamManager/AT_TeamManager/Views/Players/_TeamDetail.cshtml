@@ -1,0 +1,29 @@
+﻿@model AT_TeamManager.Models.Player
+
+@{
+    var team = new AT_TeamManager.Models.Team();
+
+    if (Model.Team != null)
+    {
+        team = Model.Team;
+    }
+}
+
+<div>
+    <h4>Team</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-6">Id</dt>
+        <dd class = "col-sm-10">@team.Id</dd>
+
+        <dt class = "col-sm-6">Nome</dt>
+        <dd class = "col-sm-10">@team.Nome</dd>
+
+        <dt class = "col-sm-6">Data de Criacao</dt>
+        <dd class = "col-sm-10">@team.DataCriacao</dd>
+
+        <dt class = "col-sm-6">Titulos Brasileiros</dt>
+        <dd class = "col-sm-10">@team.TitulosBrasileiros</dd>
+    </dl>
+</div>
+
